@@ -10,6 +10,11 @@ p {
   font-family: "Merienda";
 }
 
+button:hover {
+  -webkit-box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1rem 0.1rem rgba(0, 0, 0, 0.2);
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -31,8 +36,9 @@ header {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -85,6 +91,12 @@ nav menu ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
 }
 
 nav menu ul li {
@@ -142,18 +154,78 @@ nav button {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  background: red;
 }
 
 .info-hero {
   width: 43%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.info-hero button {
+.info-hero p {
+  padding: 0.8rem;
+}
+
+.btn-album {
   border-radius: 0.5rem;
   border: none;
-  background: pink;
   padding: 1rem;
+}
+
+.btn-youtube {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: auto;
+  background: transparent;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.btn-youtube:hover {
+  background: #f2f2f2;
+}
+
+.btn-youtube .icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 100%;
+  background: rgb(254, 190, 27);
+  margin: 0 1rem 0 0;
+  padding: 0.5rem;
+}
+
+.btn-youtube .icon svg {
+  width: 2rem;
+  fill: #fff;
 }
 
 .img-hero {
@@ -236,7 +308,7 @@ nav button {
 }
 
 .spotify {
-  fill: green;
+  fill: rgb(12, 167, 12);
 }
 
 /*albumes section*/
@@ -273,7 +345,7 @@ nav button {
   width: 4rem;
   height: 4rem;
   border-radius: 1rem;
-  background: rgb(134, 4, 143);
+  background: rgb(248, 143, 255);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,10 +403,29 @@ nav button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
 }
 
 .album:hover {
   height: 15rem;
+}
+
+.dollhouse img {
+  width: 100%;
+}
+
+.cry-baby img {
+  width: 100%;
+}
+
+.k-12 img {
+  width: 100%;
+}
+
+.after-school img {
+  width: 100%;
 }
 
 /*seccion sobre mi*/
@@ -362,7 +453,7 @@ nav button {
 }
 
 .info-sobre_mi {
-  width: 43%;
+  width: 45%;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -427,6 +518,7 @@ nav button {
   border-radius: 0.8rem;
   background: rgb(235, 218, 255);
   position: relative;
+  font-size: 0.8rem;
 }
 
 .section-info .icon {
@@ -457,7 +549,7 @@ nav button {
 .publicidad {
   width: 88%;
   height: 60vh;
-  background: #f3f3f3;
+  background: url(/img/concierto.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -833,4 +925,90 @@ nav button {
 
 .description-container_biografia h5 {
   font-size: 1rem;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.6rem;
+}
+
+/*responsive desing*/
+@media (max-width: 1200px) {
+  /*header*/
+  .logo {
+    width: 20%;
+  }
+
+  nav menu ul li {
+    margin: 0 0.8rem;
+  }
+
+  /*container*/
+  /*hero*/
+  /**redes-sociales*/
+  /*albumes*/
+  .albumes {
+    width: 100%;
+  }
+
+  .container-albumes {
+    width: 100%;
+  }
+
+  .album {
+    width: 22%;
+  }
+
+  /*sobre mi*/
+  .img-sobre_mi {
+    width: 70%;
+  }
+
+  .info-sobre_mi {
+    width: 90%;
+  }
+
+  /*publicidad*/
+  .popular {
+    width: 100%;
+  }
+
+  .container-popular {
+    width: 100%;
+  }
+
+  .options-container_popular {
+    width: 95%;
+  }
+
+  .option {
+    width: 43%;
+  }
+
+  .img-popular {
+    width: 60%;
+  }
+
+  /*biografia*/
+  .biografia {
+    width: 100%;
+  }
+
+  .img-biografia {
+    width: 30%;
+  }
+
+  .container-biografia {
+    width: 65%;
+  }
 }
