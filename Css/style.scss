@@ -743,8 +743,12 @@ footer {
             width: 100%;
             font-size: 1.2rem;
         }
+        .container-section_info {
+            width: 100%;
+            @include flexible(flex, wrap, space-around, center);
+        }
         .section-info {
-            width: 43%;
+            width: 40%;
             font-size: 0.7rem;
             padding: 1rem;
             margin: 0.9rem;
@@ -758,9 +762,21 @@ footer {
         }
     }
     /*publicidad*/
+    .publicidad {
+        height: 20rem;
+    }
     /*popular*/
     .header-container_popular {
         width: 100%;
+        font-size: 1rem;
+        height: 7rem;
+    }
+    .header-container_popular .icon {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .header-container_popular .icon svg {
+        width: 2rem;
     }
     .options-container_popular {
         width: 100%;
