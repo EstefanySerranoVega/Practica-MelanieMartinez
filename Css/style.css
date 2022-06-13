@@ -1017,6 +1017,11 @@ footer {
   .container-biografia {
     width: 65%;
   }
+
+  /*publicidad*/
+  /*popular*/
+
+  /*biografia section*/
 }
 @media (max-width: 1200px) and (max-width: 800px) {
   header {
@@ -1185,5 +1190,76 @@ footer {
 
   .section-info .ico svg {
     width: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+  .header-container_popular {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .options-container_popular {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .option {
+    width: 45%;
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .option .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .option .icon svg {
+    width: 1.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .img-popular {
+    width: 70%;
+    height: 15rem;
+  }
+}
+@media (max-width: 1200px) {
+  .biografia {
+    width: 100%;
+  }
+}
+@media (max-width: 1200px) {
+  .img-biografia {
+    width: 70%;
+  }
+}
+@media (max-width: 1200px) {
+  .container-biografia {
+    width: 90%;
+  }
+}
+@media (max-width: 1200px) {
+  .header-container_biografia {
+    width: 90%;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1200px) {
+  .header-container_biografia .icon {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .header-container_biografia .icon svg {
+    width: 2rem;
+  }
+}
+@media (max-width: 1200px) {
+  .descripcion-container_biografia {
+    padding: 0.5rem;
   }
 }
