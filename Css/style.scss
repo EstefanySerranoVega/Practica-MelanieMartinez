@@ -348,7 +348,7 @@ nav button {
 .publicidad {
     width: 88%;
     height: 60vh;
-    background: url(/img/concierto.jpg);
+    background: url(img/concierto.jpg);
     @include flexible(flex, wrap, center, center);
     position: relative;
     border-radius: 1rem;
@@ -675,7 +675,7 @@ footer {
         }
         /*hero secction*/
         .hero {
-            background: url(/img/melanie.jpg);
+            background: url(img/melanie.jpg);
             position: relative;
         }
         .hero:before {
