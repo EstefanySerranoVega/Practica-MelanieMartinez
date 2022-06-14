@@ -280,7 +280,7 @@ nav button {
 }
 
 .img-sobre_mi {
-    width: 43%;
+    width: 40%;
 }
 
 .img-sobre_mi img {
@@ -317,8 +317,13 @@ nav button {
     width: 2rem;
 }
 
+.container-section_info {
+    @include flexible(flex, wrap, space-around, center);
+    width: 100%;
+}
+
 .section-info {
-    width: 43%;
+    width: 40%;
     height: 9rem;
     margin: 1rem;
     padding: 2rem;
@@ -348,7 +353,7 @@ nav button {
 .publicidad {
     width: 88%;
     height: 60vh;
-    background: url(img/concierto.jpg);
+    background: url(/img/concierto.jpg);
     @include flexible(flex, wrap, center, center);
     position: relative;
     border-radius: 1rem;
@@ -675,7 +680,7 @@ footer {
         }
         /*hero secction*/
         .hero {
-            background: url(img/melanie.jpg);
+            background: url(/img/melanie.jpg);
             position: relative;
         }
         .hero:before {
@@ -693,7 +698,7 @@ footer {
             width: 0;
             height: 0;
             overflow: hidden;
-            position: absolite;
+            position: absolute;
         }
         /*redes sociales seccion*/
         .redes-sociales {
