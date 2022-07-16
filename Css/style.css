@@ -345,6 +345,8 @@ nav button {
       -ms-flex-align: center;
           align-items: center;
   width: 90%;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .title-albumes .icon {
@@ -390,6 +392,8 @@ nav button {
   margin: 1rem 0;
   background: pink;
   border-radius: 0.8rem;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .album {
@@ -412,6 +416,8 @@ nav button {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow: hidden;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .album:hover {

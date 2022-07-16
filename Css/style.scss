@@ -213,6 +213,7 @@ nav button {
 .title-albumes {
     @include flexible(flex, wrap, center, center);
     width: 90%;
+    transition: all 500ms;
 }
 
 .title-albumes .icon {
@@ -238,6 +239,7 @@ nav button {
     margin: 1rem 0;
     background: pink;
     border-radius: 0.8rem;
+    transition: all 500ms;
 }
 
 .album {
@@ -249,6 +251,7 @@ nav button {
     @include flexible(flex, wrap, center, center);
     box-sizing: border-box;
     overflow: hidden;
+    transition: all 500ms;
 }
 
 .album:hover {
@@ -353,7 +356,7 @@ nav button {
 .publicidad {
     width: 88%;
     height: 60vh;
-    background: url(/img/concierto.jpg);
+    background: url(../img/concierto.jpg);
     @include flexible(flex, wrap, center, center);
     position: relative;
     border-radius: 1rem;
