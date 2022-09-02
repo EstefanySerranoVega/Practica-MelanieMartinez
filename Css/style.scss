@@ -40,17 +40,18 @@ header {
 nav {
     @include flexible(flex, wrap, space-between, center);
     width: 90%;
-    height: 100%;
 }
 
 nav .logo {
-    width: 30%;
-    font-size: 2rem;
+    padding: 0.8rem;
+    font-size: 1.8rem;
+    background: green;
 }
 
 nav menu {
     @include flexible(flex, wrap, space-around, center);
-    width: 50%;
+    width: 55%;
+    background: red;
 }
 
 nav menu ul {
@@ -65,16 +66,20 @@ a {
 
 nav menu ul li {
     @include flexible(flex, wrap, space-around, center);
-    margin: 0 2rem;
+    margin: 0 0.8rem;
+    border-radius: 0.6rem;
+    padding: 0.8rem;
+    transition: all 500ms;
+    background: orange;
 }
 
 li:hover {
     color: orange;
+    background: #f2f2f2;
 }
 
 nav button {
-    width: 5rem;
-    height: 2rem;
+    padding: 0.8rem;
     border-radius: 0.5rem;
     border: none;
     background: pink;
@@ -173,6 +178,7 @@ nav button {
     height: 4.5rem;
     @include flexible(flex, wrap, center, center);
     border-radius: 0.8rem;
+    transition: all 500ms;
 }
 
 .icon:hover {
@@ -208,6 +214,7 @@ nav button {
 .albumes {
     @include flexible(flex, wrap, space-around, center);
     width: 100%;
+    transition: all 500ms;
 }
 
 .title-albumes {
@@ -650,16 +657,17 @@ footer {
     .container-biografia {
         width: 65%;
     }
-    @media (max-width:800px) {
+    @media (max-width:930px) {
         header {
             width: 100%;
         }
         nav {
             width: 95%;
             @include flexible(flex, wrap, space-between, center);
+            background: green;
         }
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
         }
         menu {
             width: 0;
@@ -828,5 +836,33 @@ footer {
     }
     .descripcion-container_biografia {
         padding: 0.5rem;
+    }
+}
+
+@media(max-width:650px) {
+    header {
+        width: 100%;
+    }
+    nav {
+        width: 98%;
+        @include flexible(flex, wrap, space-between, center);
+    }
+    nav .logo {
+        font-size: 1.5rem;
+        position: relative;
+    }
+    nav button {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        display: none;
+        position: absolute;
+    }
+    nav a {
+        width: 0;
+        height: 0;
+        overflow: hidden;
+        display: none;
+        position: absolute;
     }
 }
