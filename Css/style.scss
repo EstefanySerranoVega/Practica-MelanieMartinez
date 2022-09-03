@@ -45,13 +45,11 @@ nav {
 nav .logo {
     padding: 0.8rem;
     font-size: 1.8rem;
-    background: green;
 }
 
 nav menu {
     @include flexible(flex, wrap, space-around, center);
     width: 55%;
-    background: red;
 }
 
 nav menu ul {
@@ -70,7 +68,6 @@ nav menu ul li {
     border-radius: 0.6rem;
     padding: 0.8rem;
     transition: all 500ms;
-    background: orange;
 }
 
 li:hover {
@@ -229,6 +226,7 @@ nav button {
     border-radius: 1rem;
     background: rgb(248, 143, 255);
     @include flexible(flex, wrap, center, center);
+    transition: all 500ms;
 }
 
 .title-albumes .icon svg {
@@ -351,6 +349,7 @@ nav button {
     height: 3.8rem;
     border-radius: 0.8rem;
     @include flexible(flex, wrap, center, center);
+    transition: all 500ms;
 }
 
 .section-info .icon svg {
@@ -419,6 +418,7 @@ nav button {
     border-radius: 0.8rem;
     background: #f2f2f2;
     @include flexible(flex, wrap, center, center);
+    transition: all 300ms;
 }
 
 .header-container_popular .icon svg {
@@ -454,6 +454,7 @@ nav button {
 .option:hover .icon {
     border: 0.2rem solid #fff8;
     background: rgb(254, 190, 27);
+    transition: all 500ms;
 }
 
 .option:hover .icon svg {
