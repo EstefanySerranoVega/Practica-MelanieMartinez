@@ -35,11 +35,13 @@ body {
 header {
     @include flexible(flex, wrap, center, center);
     height: 4rem;
+    max-width: 1800px;
 }
 
 nav {
     @include flexible(flex, wrap, space-between, center);
     width: 90%;
+    transition: all 500ms;
 }
 
 nav .logo {
@@ -610,7 +612,10 @@ footer {
         width: 20%;
     }
     nav menu ul li {
-        margin: 0 0.8rem;
+        margin: 0 0.5rem;
+    }
+    menu {
+        width: 70%;
     }
     /*container*/
     /*hero*/
@@ -658,25 +663,30 @@ footer {
     .container-biografia {
         width: 65%;
     }
-    @media (max-width:930px) {
+    @media (max-width:992px) {
         header {
             width: 100%;
         }
         nav {
             width: 95%;
             @include flexible(flex, wrap, space-between, center);
-            background: green;
+            transition: all 500ms;
+        }
+        nav menu {
+            width: 12rem;
+            display: flex;
+            justify-content: space-between;
         }
         .logo {
             font-size: 1.5rem;
         }
-        menu {
+        menu ul {
             width: 0;
             height: 0;
             overflow: hidden;
             position: absolute;
         }
-        .menu-bars {
+        menu .menu-bars {
             width: 2rem;
             height: 2rem;
             @include flexible(flex, wrap, center, center);
@@ -688,7 +698,7 @@ footer {
         }
         nav button {
             background: yellow;
-            width: 5rem;
+            padding: 0.8rem;
         }
         /*hero secction*/
         .hero {
@@ -847,12 +857,16 @@ footer {
     nav {
         width: 98%;
         @include flexible(flex, wrap, space-between, center);
+        transition: all 500ms;
     }
     nav .logo {
         font-size: 1.5rem;
         position: relative;
     }
-    nav button {
+    nav menu {
+        width: 5rem;
+    }
+    nav menu button {
         width: 0;
         height: 0;
         overflow: hidden;
