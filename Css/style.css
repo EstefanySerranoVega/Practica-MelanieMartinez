@@ -1422,7 +1422,7 @@ footer {
     position: absolute;
   }
 
-  nav a {
+  nav li {
     width: 0;
     height: 0;
     overflow: hidden;
@@ -1430,27 +1430,33 @@ footer {
     position: absolute;
   }
 
-  /*
+  .menu-bars_active menu {
+    height: auto;
+    background: yellow;
+  }
+
   .menu-bars_active {
-      background: orange;
-      display: block;
-      width: 20rem;
-      height: 50vh;
-      top: 4rem;
-      margin-left: -15rem;
-      z-index: 1000;
+    background: rgba(242, 242, 242, 0.3333333333);
+    display: block;
+    width: 15rem;
+    height: auto;
+    top: 4rem;
+    margin-left: -10rem;
+    z-index: 1000;
   }
+
   .menu-bars_active li {
-      background: red;
-      padding: 0.3rem;
-      margin: 0.5rem;
-      width: 100%;
-      height: 2rem;
-      position: absolute;
+    background: #f2f2f2;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    width: 100%;
+    height: 2rem;
+    position: relative;
+    overflow: visible;
   }
+
   .menu-bars_active li:hover {
-      color: orange;
-      background: #f2f2f2;
+    color: orange;
+    background: #f2f2f2;
   }
-  */
 }
