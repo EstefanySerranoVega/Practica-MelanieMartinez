@@ -1,883 +1,912 @@
-@mixin flexible($disp, $wrap, $just, $align) {
-    display: $disp;
-    flex-wrap: $wrap;
-    justify-content: $just;
-    align-items: $align;
-}
-
-@mixin background($repeat, $pos) {
-    background-repeat: $repeat;
-    background-position: $pos;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Acme', sans-serif;
-}
-
-p {
-    font-family: 'Merienda';
-}
-
-button:hover {
-    box-shadow: 0 0 1rem 0.1rem#0003;
-}
-
-body {
-    @include flexible(flex, wrap, center, center);
-}
-
-
-/*header*/
-
-header {
-    @include flexible(flex, wrap, center, center);
-    height: 4rem;
-    max-width: 1800px;
-}
-
-nav {
-    @include flexible(flex, wrap, space-between, center);
-    width: 90%;
-    transition: all 500ms;
-}
-
-nav .logo {
-    padding: 0.8rem;
-    font-size: 1.8rem;
-}
-
-nav menu {
-    @include flexible(flex, wrap, space-around, center);
-    width: 55%;
-}
-
-nav menu ul {
-    @include flexible(flex, wrap, space-around, center);
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-nav menu ul li {
-    @include flexible(flex, wrap, space-around, center);
-    margin: 0 0.8rem;
-    border-radius: 0.6rem;
-    padding: 0.8rem;
-    transition: all 500ms;
-}
-
-li:hover {
-    color: orange;
-    background: #f2f2f2;
-}
-
-nav button {
-    padding: 0.8rem;
-    border-radius: 0.5rem;
-    border: none;
-    background: pink;
-}
-
-.menu-bars {
-    width: 0;
-    height: 0;
-    overflow: hidden;
-}
-
-
-/*container*/
-
-.container {
-    @include flexible(flex, wrap, center, center);
-    width: 100%;
-}
-
-
-/*hero*/
-
-.hero {
-    @include flexible(flex, wrap, space-around, center);
-    width: 100%;
-}
-
-.info-hero {
-    width: 43%;
-    @include flexible(flex, wrap, space-around, center);
-}
-
-.info-hero p {
-    padding: 0.8rem;
-}
-
-.btn-album {
-    border-radius: 0.5rem;
-    border: none;
-    padding: 1rem;
-}
-
-.btn-youtube {
-    @include flexible(flex, wrap, center, center);
-    width: auto;
-    background: transparent;
-    border: none;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-}
-
-.btn-youtube:hover {
-    background: #f2f2f2;
-}
-
-.btn-youtube .icon {
-    @include flexible(flex, wrap, center, center);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 100%;
-    background: rgb(254, 190, 27);
-    margin: 0 1rem 0 0;
-    padding: 0.5rem;
-}
-
-.btn-youtube .icon svg {
-    width: 2rem;
-    fill: #fff;
-}
-
-.img-hero {
-    width: 43%;
-    border-radius: 3rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    @include flexible(flex, wrap, center, center);
-    margin: 1rem;
-}
-
-.img-hero img {
-    width: 100%;
-}
-
-
-/*redes-sociales*/
-
-.redes-sociales {
-    @include flexible(flex, wrap, space-around, center);
-    width: 90%;
-    height: 5rem;
-    padding: 0 2rem;
-}
-
-.redes-sociales .icon {
-    width: 6rem;
-    height: 4.5rem;
-    @include flexible(flex, wrap, center, center);
-    border-radius: 0.8rem;
-    transition: all 500ms;
-}
-
-.icon:hover {
-    background: #f2f2f2;
-}
-
-.icon svg {
-    width: 4rem;
-}
-
-
-/*stilos de icono por red social*/
-
-.youtube {
-    fill: red;
-}
-
-.instagram {
-    fill: orange;
-}
-
-.twitter {
-    fill: skyblue;
-}
-
-.spotify {
-    fill: rgb(12, 167, 12);
-}
-
-
-/*albumes section*/
-
-.albumes {
-    @include flexible(flex, wrap, space-around, center);
-    width: 100%;
-    transition: all 500ms;
-}
-
-.title-albumes {
-    @include flexible(flex, wrap, center, center);
-    width: 90%;
-    transition: all 500ms;
-}
-
-.title-albumes .icon {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 1rem;
-    background: rgb(248, 143, 255);
-    @include flexible(flex, wrap, center, center);
-    transition: all 500ms;
-}
-
-.title-albumes .icon svg {
-    width: 3rem;
-}
-
-.title-albumes h2 {
-    margin: 0 1rem;
-    width: 80%;
-}
-
-.container-albumes {
-    @include flexible(flex, wrap, center, center);
-    width: 90%;
-    margin: 1rem 0;
-    background: pink;
-    border-radius: 0.8rem;
-    transition: all 500ms;
-}
-
-.album {
-    width: 12rem;
-    height: 10rem;
-    background: orange;
-    margin: 1rem 0.5rem;
-    border-radius: 0.8rem;
-    @include flexible(flex, wrap, center, center);
-    box-sizing: border-box;
-    overflow: hidden;
-    transition: all 500ms;
-}
-
-.album:hover {
-    height: 15rem;
-}
-
-.dollhouse img {
-    width: 100%;
-}
-
-.cry-baby img {
-    width: 100%;
-}
-
-.k-12 img {
-    width: 100%;
-}
-
-.after-school img {
-    width: 100%;
-}
-
-
-/*seccion sobre mi*/
-
-.sobre-mi {
-    @include flexible(flex, wrap, space-around, center);
-    width: 100%;
-}
-
-.img-sobre_mi {
-    width: 40%;
-}
-
-.img-sobre_mi img {
-    width: 100%;
-    border-radius: 0.8rem;
-}
-
-.info-sobre_mi {
-    width: 45%;
-    padding: 1rem;
-    @include flexible(flex, wrap, space-around, center);
-    position: relative;
-}
-
-.title-info {
-    width: 90%;
-    font-size: 1.5rem;
-    position: relative;
-    height: 5rem;
-    @include flexible(flex, wrap, center, center);
-    margin: 0 0 1rem 0;
-}
-
-.title-info .icon {
-    @include flexible(flex, wrap, center, center);
-    width: 3rem;
-    height: 3rem;
-    border-radius: 0.5rem;
-    margin: 0 1rem;
-    background: rgb(255, 0, 162);
-}
-
-.title-info .icon svg {
-    width: 2rem;
-}
-
-.container-section_info {
-    @include flexible(flex, wrap, space-around, center);
-    width: 100%;
-}
-
-.section-info {
-    width: 40%;
-    height: 9rem;
-    margin: 1rem;
-    padding: 2rem;
-    border-radius: 0.8rem;
-    background: rgb(235, 218, 255);
-    position: relative;
-    font-size: 0.8rem;
-}
-
-.section-info .icon {
-    position: absolute;
-    top: -2rem;
-    background: #f2f2f2;
-    width: 5rem;
-    height: 3.8rem;
-    border-radius: 0.8rem;
-    @include flexible(flex, wrap, center, center);
-    transition: all 500ms;
-}
-
-.section-info .icon svg {
-    width: 3rem;
-}
-
-
-/*seccion publicidad*/
-
-.publicidad {
-    width: 88%;
-    height: 60vh;
-    background: url(../Img/concierto.jpg);
-    @include flexible(flex, wrap, center, center);
-    position: relative;
-    border-radius: 1rem;
-    margin: 2rem 0;
-}
-
-.publicidad:before {
-    width: 100%;
-    height: 100%;
-    content: '';
-    position: absolute;
-    background: #ffffff55;
-}
-
-.publicidad p {
-    z-index: 1;
-    font-size: 3rem;
-    width: 100%;
-    text-align: center;
-}
-
-.publicidad button {
-    z-index: 1;
-    border: none;
-    border-radius: 0.5rem;
-    padding: 0.8rem;
-}
-
-
-/*popular section*/
-
-.popular {
-    @include flexible(flex, wrap, center, center);
-    width: 100%;
-}
-
-.container-popular {
-    @include flexible(flex, wrap, space-around, center);
-    width: 43%;
-    padding: 1rem;
-}
-
-.header-container_popular {
-    width: 95%;
-    height: 6rem;
-    margin: 1rem 0;
-    @include flexible(flex, wrap, space-around, center);
-}
-
-.header-container_popular .icon {
-    width: 4rem;
-    height: 4rem;
-    border-radius: 0.8rem;
-    background: #f2f2f2;
-    @include flexible(flex, wrap, center, center);
-    transition: all 300ms;
-}
-
-.header-container_popular .icon svg {
-    width: 2rem;
-}
-
-.header-container_popular h3 {
-    font-size: 1.8rem;
-}
-
-.options-container_popular {
-    width: 95%;
-    margin: 1rem 0;
-    @include flexible(flex, wrap, center, center);
-}
-
-.option {
-    @include flexible(flex, wrap, space-around, center);
-    width: 85%;
-    height: 6rem;
-    background: rgb(233, 185, 255);
-    margin: 0.5rem;
-    border-radius: 1.8rem;
-    transition: all 450ms;
-}
-
-.option:hover {
-    color: #00000088;
-    background: rgb(219, 143, 255);
-    box-shadow: 0 0 1rem 0.1rem#0003;
-}
-
-.option:hover .icon {
-    border: 0.2rem solid #fff8;
-    background: rgb(254, 190, 27);
-    transition: all 500ms;
-}
-
-.option:hover .icon svg {
-    fill: #fff;
-}
-
-.option .icon {
-    @include flexible(flex, wrap, center, center);
-    width: 4.3rem;
-    height: 4rem;
-    border-radius: 0.8rem;
-    background: #f2f2f2;
-    border: 0.2rem solid #000000;
-}
-
-.option .icon svg {
-    width: 2rem;
-}
-
-.option h4 {
-    @include flexible(flex, wrap, space-between, center);
-    width: 65%;
-    height: 70%;
-    font-size: 1.3rem;
-}
-
-.img-popular {
-    @include flexible(flex, wrap, center, center);
-    width: 40%;
-    height: 33rem;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 3rem;
-    border: 0.8rem solid rgba(209, 31, 254, 0.565);
-}
-
-.img-popular img {
-    width: 100%;
-}
-
-
-/*biografia section*/
-
-.biografia {
-    @include flexible(flex, wrap, space-around, center);
-    width: 90%;
-    margin: 0.5rem;
-    border-radius: 1.8rem;
-    transition: all 450ms;
-    padding: 1rem;
-    position: relative;
-}
-
-.img-biografia {
-    width: 43%;
-    box-sizing: border-box;
-    overflow: hidden;
-    border-radius: 3rem;
-}
-
-.img-biografia img {
-    width: 100%;
-}
-
-.container-biografia {
-    @include flexible(flex, wrap, space-around, center);
-    width: 43%;
-    margin: 0.5rem;
-    padding: 0.5rem;
-    transition: all 450ms;
-    position: relative;
-}
-
-.header-container_biografia {
-    @include flexible(flex, wrap, space-around, center);
-    width: 90%;
-    padding: 0.8rem;
-    position: relative;
-}
-
-.header-container_biografia .icon {
-    @include flexible(flex, wrap, center, center);
-    width: 4rem;
-    height: 4rem;
-    background: rgb(185, 33, 255);
-    border-radius: 0.8rem;
-    border: 0.3rem solid #d3d3d3;
-}
-
-.header-container_biografia .icon svg {
-    width: 2.5rem;
-    fill: rgb(244, 180, 19);
-}
-
-.header-container_biografia h4 {
-    font-size: 1.2rem;
-}
-
-.header-container_biografia p {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    font-size: 1rem;
-    font-family: 'Ubuntu Condensed';
-}
-
-.description-container_biografia .icon {
-    @include flexible(flex, wrap, center, center);
-    width: 3.8rem;
-    height: 3.8rem;
-    background: #e8c3ff;
-    border-radius: 0.8rem;
-    border: 0.2rem solid #f2f2f2;
-    position: absolute;
-    top: -2rem;
-}
-
-.description-container_biografia .icon svg {
-    width: 2.2rem;
-}
-
-.description-container_biografia {
-    width: 95%;
-    margin: 0.5rem;
-    padding: 2rem 1.3rem;
-    background: rgb(233, 185, 255);
-    border: 0.3rem solid #f2f2f2;
-    border-radius: 0.8rem;
-    position: relative;
-}
-
-.description-container_biografia p {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    font-size: 0.9rem;
-    font-family: 'Ubuntu Condensed';
-}
-
-.description-container_biografia h5 {
-    font-size: 1rem;
-}
-
-footer {
-    @include flexible(flex, wrap, center, center);
-    font-size: 0.6rem;
-}
-
-
-/*responsive desing*/
-
-@media(max-width:1200px) {
-    /*header*/
-    .logo {
-        width: 20%;
-    }
-    nav menu ul li {
-        margin: 0 0.5rem;
-    }
-    menu {
-        width: 70%;
-    }
-    /*container*/
-    /*hero*/
-    /**redes-sociales*/
-    /*albumes*/
-    .albumes {
-        width: 100%;
-    }
-    .container-albumes {
-        width: 100%;
-    }
-    .album {
-        width: 22%;
-    }
-    /*sobre mi*/
-    .img-sobre_mi {
-        width: 70%;
-    }
-    .info-sobre_mi {
-        width: 90%;
-    }
-    /*publicidad*/
-    .popular {
-        width: 100%;
-    }
-    .container-popular {
-        width: 100%;
-    }
-    .options-container_popular {
-        width: 95%;
-    }
-    .option {
-        width: 43%;
-    }
-    .img-popular {
-        width: 60%;
-    }
-    /*biografia*/
-    .biografia {
-        width: 100%;
-    }
-    .img-biografia {
-        width: 30%;
-    }
-    .container-biografia {
-        width: 65%;
-    }
-    @media (max-width:992px) {
-        header {
-            width: 100%;
-        }
-        nav {
-            width: 95%;
-            @include flexible(flex, wrap, space-between, center);
-            transition: all 500ms;
-        }
-        nav menu {
-            width: 12rem;
-            display: flex;
-            justify-content: space-between;
-        }
-        .logo {
-            font-size: 1.5rem;
-        }
-        menu ul {
-            width: 0;
-            height: 0;
-            overflow: hidden;
-            position: absolute;
-        }
-        menu .menu-bars {
-            width: 2rem;
-            height: 2rem;
-            @include flexible(flex, wrap, center, center);
-            margin: 0 0.8rem;
-            border-radius: 100%;
-        }
-        .menu-bars svg {
-            width: 1.2rem;
-        }
-        nav button {
-            background: yellow;
-            padding: 0.8rem;
-        }
-        /*hero secction*/
-        .hero {
-            background: url(../Img/melanie.jpg);
-            position: relative;
-        }
-        .hero:before {
-            content: '';
-            width: 100%;
-            height: 100%;
-            background: #fff5;
-            position: absolute;
-        }
-        .info-hero {
-            width: 80%;
-            z-index: 1;
-        }
-        .img-hero {
-            width: 0;
-            height: 0;
-            overflow: hidden;
-            position: absolute;
-        }
-        /*redes sociales seccion*/
-        .redes-sociales {
-            width: 100%;
-        }
-        .social {
-            width: 3rem;
-            height: 2.8rem;
-        }
-        .social .icon {
-            width: 3rem;
-            height: 2.8rem;
-        }
-        .icon svg {
-            width: 2rem;
-        }
-        /*albumes section*/
-        .title-albumes {
-            width: 90%;
-            font-size: 1rem;
-        }
-        .title-albumes .icon {
-            width: 2rem;
-            height: 2rem;
-        }
-        .title-albumes .icon svg {
-            width: 1.5rem;
-        }
-        .container-albumes {
-            width: 100%;
-        }
-        .album {
-            width: 45%;
-            height: 6rem;
-            @include flexible(flex, wrap, space-around, center);
-        }
-        .album img {
-            width: 5rem;
-            height: 5rem;
-            border-radius: 1rem;
-        }
-        /*sobre mi section*/
-        .info-sobre_mi {
-            width: 100%;
-        }
-        .title-info {
-            width: 100%;
-            font-size: 1.2rem;
-        }
-        .container-section_info {
-            width: 100%;
-            @include flexible(flex, wrap, space-around, center);
-        }
-        .section-info {
-            width: 40%;
-            font-size: 0.7rem;
-            padding: 1rem;
-            margin: 0.9rem;
-        }
-        .section-info .icon {
-            width: 2.5rem;
-            height: 2.5rem;
-        }
-        .section-info .ico svg {
-            width: 2rem;
-        }
-    }
-    /*publicidad*/
-    .publicidad {
-        height: 20rem;
-    }
-    /*popular*/
-    .header-container_popular {
-        width: 100%;
-        font-size: 1rem;
-        height: 7rem;
-    }
-    .header-container_popular .icon {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-    .header-container_popular .icon svg {
-        width: 2rem;
-    }
-    .options-container_popular {
-        width: 100%;
-    }
-    .option {
-        width: 45%;
-        font-size: 1rem;
-        padding: 0.5rem;
-    }
-    .option .icon {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-    .option .icon svg {
-        width: 1.5rem;
-    }
-    .img-popular {
-        width: 70%;
-        height: 15rem;
-    }
-    /*biografia section*/
-    .biografia {
-        width: 100%;
-    }
-    .img-biografia {
-        width: 70%;
-    }
-    .container-biografia {
-        width: 90%;
-    }
-    .header-container_biografia {
-        width: 90%;
-        font-size: 1rem;
-    }
-    .header-container_biografia .icon {
-        width: 2.5rem;
-        height: 2.5rem;
-    }
-    .header-container_biografia .icon svg {
-        width: 2rem;
-    }
-    .descripcion-container_biografia {
-        padding: 0.5rem;
-    }
-}
-
-@media(max-width:650px) {
-    header {
-        width: 100%;
-    }
-    nav {
-        width: 98%;
-        @include flexible(flex, wrap, space-between, center);
-        transition: all 500ms;
-    }
-    nav .logo {
-        font-size: 1.5rem;
-        position: relative;
-    }
-    nav menu {
-        width: 5rem;
-    }
-    nav menu button {
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        display: none;
-        position: absolute;
-    }
-    nav a {
-        width: 0;
-        height: 0;
-        overflow: hidden;
-        display: none;
-        position: absolute;
-    }
-}
+            @mixin flexible($disp, $wrap, $just, $align) {
+                display: $disp;
+                flex-wrap: $wrap;
+                justify-content: $just;
+                align-items: $align;
+            }
+            
+            @mixin background($repeat, $pos) {
+                background-repeat: $repeat;
+                background-position: $pos;
+            }
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Acme', sans-serif;
+            }
+            
+            p {
+                font-family: 'Merienda';
+            }
+            
+            button:hover {
+                box-shadow: 0 0 1rem 0.1rem#0003;
+            }
+            
+            body {
+                @include flexible(flex, wrap, center, center);
+            }
+            /*header*/
+            
+            header {
+                @include flexible(flex, wrap, center, center);
+                height: 4rem;
+                max-width: 1800px;
+            }
+            
+            nav {
+                @include flexible(flex, wrap, space-between, center);
+                width: 90%;
+                transition: all 500ms;
+            }
+            
+            nav .logo {
+                padding: 0.8rem;
+                font-size: 1.8rem;
+            }
+            
+            nav menu {
+                @include flexible(flex, wrap, space-around, center);
+                width: 55%;
+            }
+            
+            nav menu ul {
+                @include flexible(flex, wrap, space-around, center);
+                list-style: none;
+            }
+            
+            a {
+                text-decoration: none;
+                color: #000000;
+            }
+            
+            nav menu ul li {
+                @include flexible(flex, wrap, space-around, center);
+                margin: 0 0.8rem;
+                border-radius: 0.6rem;
+                padding: 0.8rem;
+                transition: all 500ms;
+            }
+            
+            li:hover {
+                color: orange;
+                background: #f2f2f2;
+            }
+            
+            nav button {
+                padding: 0.8rem;
+                border-radius: 0.5rem;
+                border: none;
+                background: pink;
+            }
+            
+            .menu-bars {
+                width: 0;
+                height: 0;
+                overflow: hidden;
+            }
+            /*container*/
+            
+            .container {
+                @include flexible(flex, wrap, center, center);
+                width: 100%;
+            }
+            /*hero*/
+            
+            .hero {
+                @include flexible(flex, wrap, space-around, center);
+                width: 100%;
+            }
+            
+            .info-hero {
+                width: 43%;
+                @include flexible(flex, wrap, space-around, center);
+            }
+            
+            .info-hero p {
+                padding: 0.8rem;
+            }
+            
+            .btn-album {
+                border-radius: 0.5rem;
+                border: none;
+                padding: 1rem;
+            }
+            
+            .btn-youtube {
+                @include flexible(flex, wrap, center, center);
+                width: auto;
+                background: transparent;
+                border: none;
+                padding: 0.5rem;
+                border-radius: 0.5rem;
+            }
+            
+            .btn-youtube:hover {
+                background: #f2f2f2;
+            }
+            
+            .btn-youtube .icon {
+                @include flexible(flex, wrap, center, center);
+                width: 3rem;
+                height: 3rem;
+                border-radius: 100%;
+                background: rgb(254, 190, 27);
+                margin: 0 1rem 0 0;
+                padding: 0.5rem;
+            }
+            
+            .btn-youtube .icon svg {
+                width: 2rem;
+                fill: #fff;
+            }
+            
+            .img-hero {
+                width: 43%;
+                border-radius: 3rem;
+                box-sizing: border-box;
+                overflow: hidden;
+                @include flexible(flex, wrap, center, center);
+                margin: 1rem;
+            }
+            
+            .img-hero img {
+                width: 100%;
+            }
+            /*redes-sociales*/
+            
+            .redes-sociales {
+                @include flexible(flex, wrap, space-around, center);
+                width: 90%;
+                height: 5rem;
+                padding: 0 2rem;
+            }
+            
+            .redes-sociales .icon {
+                width: 6rem;
+                height: 4.5rem;
+                @include flexible(flex, wrap, center, center);
+                border-radius: 0.8rem;
+                transition: all 500ms;
+            }
+            
+            .icon:hover {
+                background: #f2f2f2;
+            }
+            
+            .icon svg {
+                width: 4rem;
+            }
+            /*stilos de icono por red social*/
+            
+            .youtube {
+                fill: red;
+            }
+            
+            .instagram {
+                fill: orange;
+            }
+            
+            .twitter {
+                fill: skyblue;
+            }
+            
+            .spotify {
+                fill: rgb(12, 167, 12);
+            }
+            /*albumes section*/
+            
+            .albumes {
+                @include flexible(flex, wrap, space-around, center);
+                width: 100%;
+                transition: all 500ms;
+            }
+            
+            .title-albumes {
+                @include flexible(flex, wrap, center, center);
+                width: 90%;
+                transition: all 500ms;
+            }
+            
+            .title-albumes .icon {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 1rem;
+                background: rgb(248, 143, 255);
+                @include flexible(flex, wrap, center, center);
+                transition: all 500ms;
+            }
+            
+            .title-albumes .icon svg {
+                width: 3rem;
+            }
+            
+            .title-albumes h2 {
+                margin: 0 1rem;
+                width: 80%;
+            }
+            
+            .container-albumes {
+                @include flexible(flex, wrap, center, center);
+                width: 90%;
+                margin: 1rem 0;
+                background: pink;
+                border-radius: 0.8rem;
+                transition: all 500ms;
+            }
+            
+            .album {
+                width: 12rem;
+                height: 10rem;
+                background: orange;
+                margin: 1rem 0.5rem;
+                border-radius: 0.8rem;
+                @include flexible(flex, wrap, center, center);
+                box-sizing: border-box;
+                overflow: hidden;
+                transition: all 500ms;
+            }
+            
+            .album:hover {
+                height: 15rem;
+            }
+            
+            .dollhouse img {
+                width: 100%;
+            }
+            
+            .cry-baby img {
+                width: 100%;
+            }
+            
+            .k-12 img {
+                width: 100%;
+            }
+            
+            .after-school img {
+                width: 100%;
+            }
+            /*seccion sobre mi*/
+            
+            .sobre-mi {
+                @include flexible(flex, wrap, space-around, center);
+                width: 100%;
+            }
+            
+            .img-sobre_mi {
+                width: 40%;
+            }
+            
+            .img-sobre_mi img {
+                width: 100%;
+                border-radius: 0.8rem;
+            }
+            
+            .info-sobre_mi {
+                width: 45%;
+                padding: 1rem;
+                @include flexible(flex, wrap, space-around, center);
+                position: relative;
+            }
+            
+            .title-info {
+                width: 90%;
+                font-size: 1.5rem;
+                position: relative;
+                height: 5rem;
+                @include flexible(flex, wrap, center, center);
+                margin: 0 0 1rem 0;
+            }
+            
+            .title-info .icon {
+                @include flexible(flex, wrap, center, center);
+                width: 3rem;
+                height: 3rem;
+                border-radius: 0.5rem;
+                margin: 0 1rem;
+                background: rgb(255, 0, 162);
+            }
+            
+            .title-info .icon svg {
+                width: 2rem;
+            }
+            
+            .container-section_info {
+                @include flexible(flex, wrap, space-around, center);
+                width: 100%;
+            }
+            
+            .section-info {
+                width: 40%;
+                height: 9rem;
+                margin: 1rem;
+                padding: 2rem;
+                border-radius: 0.8rem;
+                background: rgb(235, 218, 255);
+                position: relative;
+                font-size: 0.8rem;
+            }
+            
+            .section-info .icon {
+                position: absolute;
+                top: -2rem;
+                background: #f2f2f2;
+                width: 5rem;
+                height: 3.8rem;
+                border-radius: 0.8rem;
+                @include flexible(flex, wrap, center, center);
+                transition: all 500ms;
+            }
+            
+            .section-info .icon svg {
+                width: 3rem;
+            }
+            /*seccion publicidad*/
+            
+            .publicidad {
+                width: 88%;
+                height: 60vh;
+                background: url(../Img/concierto.jpg);
+                @include flexible(flex, wrap, center, center);
+                position: relative;
+                border-radius: 1rem;
+                margin: 2rem 0;
+            }
+            
+            .publicidad:before {
+                width: 100%;
+                height: 100%;
+                content: '';
+                position: absolute;
+                background: #ffffff55;
+            }
+            
+            .publicidad p {
+                z-index: 1;
+                font-size: 3rem;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .publicidad button {
+                z-index: 1;
+                border: none;
+                border-radius: 0.5rem;
+                padding: 0.8rem;
+            }
+            /*popular section*/
+            
+            .popular {
+                @include flexible(flex, wrap, center, center);
+                width: 100%;
+            }
+            
+            .container-popular {
+                @include flexible(flex, wrap, space-around, center);
+                width: 43%;
+                padding: 1rem;
+            }
+            
+            .header-container_popular {
+                width: 95%;
+                height: 6rem;
+                margin: 1rem 0;
+                @include flexible(flex, wrap, space-around, center);
+            }
+            
+            .header-container_popular .icon {
+                width: 4rem;
+                height: 4rem;
+                border-radius: 0.8rem;
+                background: #f2f2f2;
+                @include flexible(flex, wrap, center, center);
+                transition: all 300ms;
+            }
+            
+            .header-container_popular .icon svg {
+                width: 2rem;
+            }
+            
+            .header-container_popular h3 {
+                font-size: 1.8rem;
+            }
+            
+            .options-container_popular {
+                width: 95%;
+                margin: 1rem 0;
+                @include flexible(flex, wrap, center, center);
+            }
+            
+            .option {
+                @include flexible(flex, wrap, space-around, center);
+                width: 85%;
+                height: 6rem;
+                background: rgb(233, 185, 255);
+                margin: 0.5rem;
+                border-radius: 1.8rem;
+                transition: all 450ms;
+            }
+            
+            .option:hover {
+                color: #00000088;
+                background: rgb(219, 143, 255);
+                box-shadow: 0 0 1rem 0.1rem#0003;
+            }
+            
+            .option:hover .icon {
+                border: 0.2rem solid #fff8;
+                background: rgb(254, 190, 27);
+                transition: all 500ms;
+            }
+            
+            .option:hover .icon svg {
+                fill: #fff;
+            }
+            
+            .option .icon {
+                @include flexible(flex, wrap, center, center);
+                width: 4.3rem;
+                height: 4rem;
+                border-radius: 0.8rem;
+                background: #f2f2f2;
+                border: 0.2rem solid #000000;
+            }
+            
+            .option .icon svg {
+                width: 2rem;
+            }
+            
+            .option h4 {
+                @include flexible(flex, wrap, space-between, center);
+                width: 65%;
+                height: 70%;
+                font-size: 1.3rem;
+            }
+            
+            .img-popular {
+                @include flexible(flex, wrap, center, center);
+                width: 40%;
+                height: 33rem;
+                box-sizing: border-box;
+                overflow: hidden;
+                border-radius: 3rem;
+                border: 0.8rem solid rgba(209, 31, 254, 0.565);
+            }
+            
+            .img-popular img {
+                width: 100%;
+            }
+            /*biografia section*/
+            
+            .biografia {
+                @include flexible(flex, wrap, space-around, center);
+                width: 90%;
+                margin: 0.5rem;
+                border-radius: 1.8rem;
+                transition: all 450ms;
+                padding: 1rem;
+                position: relative;
+            }
+            
+            .img-biografia {
+                width: 43%;
+                box-sizing: border-box;
+                overflow: hidden;
+                border-radius: 3rem;
+            }
+            
+            .img-biografia img {
+                width: 100%;
+            }
+            
+            .container-biografia {
+                @include flexible(flex, wrap, space-around, center);
+                width: 43%;
+                margin: 0.5rem;
+                padding: 0.5rem;
+                transition: all 450ms;
+                position: relative;
+            }
+            
+            .header-container_biografia {
+                @include flexible(flex, wrap, space-around, center);
+                width: 90%;
+                padding: 0.8rem;
+                position: relative;
+            }
+            
+            .header-container_biografia .icon {
+                @include flexible(flex, wrap, center, center);
+                width: 4rem;
+                height: 4rem;
+                background: rgb(185, 33, 255);
+                border-radius: 0.8rem;
+                border: 0.3rem solid #d3d3d3;
+            }
+            
+            .header-container_biografia .icon svg {
+                width: 2.5rem;
+                fill: rgb(244, 180, 19);
+            }
+            
+            .header-container_biografia h4 {
+                font-size: 1.2rem;
+            }
+            
+            .header-container_biografia p {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                font-size: 1rem;
+                font-family: 'Ubuntu Condensed';
+            }
+            
+            .description-container_biografia .icon {
+                @include flexible(flex, wrap, center, center);
+                width: 3.8rem;
+                height: 3.8rem;
+                background: #e8c3ff;
+                border-radius: 0.8rem;
+                border: 0.2rem solid #f2f2f2;
+                position: absolute;
+                top: -2rem;
+            }
+            
+            .description-container_biografia .icon svg {
+                width: 2.2rem;
+            }
+            
+            .description-container_biografia {
+                width: 95%;
+                margin: 0.5rem;
+                padding: 2rem 1.3rem;
+                background: rgb(233, 185, 255);
+                border: 0.3rem solid #f2f2f2;
+                border-radius: 0.8rem;
+                position: relative;
+            }
+            
+            .description-container_biografia p {
+                margin: 0.5rem;
+                padding: 0.5rem;
+                font-size: 0.9rem;
+                font-family: 'Ubuntu Condensed';
+            }
+            
+            .description-container_biografia h5 {
+                font-size: 1rem;
+            }
+            
+            footer {
+                @include flexible(flex, wrap, center, center);
+                font-size: 0.6rem;
+            }
+            /*responsive desing*/
+            
+            @media(max-width:1200px) {
+                /*header*/
+                .logo {
+                    width: 20%;
+                }
+                nav menu ul li {
+                    margin: 0 0.5rem;
+                }
+                menu {
+                    width: 70%;
+                }
+                /*container*/
+                /*hero*/
+                /**redes-sociales*/
+                /*albumes*/
+                .albumes {
+                    width: 100%;
+                }
+                .container-albumes {
+                    width: 100%;
+                }
+                .album {
+                    width: 22%;
+                }
+                /*sobre mi*/
+                .img-sobre_mi {
+                    width: 70%;
+                }
+                .info-sobre_mi {
+                    width: 90%;
+                }
+                /*publicidad*/
+                .popular {
+                    width: 100%;
+                }
+                .container-popular {
+                    width: 100%;
+                }
+                .options-container_popular {
+                    width: 95%;
+                }
+                .option {
+                    width: 43%;
+                }
+                .img-popular {
+                    width: 60%;
+                }
+                /*biografia*/
+                .biografia {
+                    width: 100%;
+                }
+                .img-biografia {
+                    width: 30%;
+                }
+                .container-biografia {
+                    width: 65%;
+                }
+                @media (max-width:992px) {
+                    header {
+                        width: 100%;
+                        position: relative;
+                    }
+                    nav {
+                        width: 95%;
+                        @include flexible(flex, wrap, space-between, center);
+                        transition: all 500ms;
+                        position: relative;
+                    }
+                    nav menu {
+                        width: 12rem;
+                        display: flex;
+                        justify-content: space-between;
+                        position: relative;
+                        transition: all 500ms;
+                    }
+                    .logo {
+                        font-size: 1.5rem;
+                    }
+                    menu ul {
+                        display: none;
+                        position: absolute;
+                        overflow: hidden;
+                        width: 0;
+                        height: 0;
+                    }
+                    menu ul li {
+                        display: none;
+                    }
+                    menu .menu-bars {
+                        width: 2rem;
+                        height: 2rem;
+                        @include flexible(flex, wrap, center, center);
+                        margin: 0 0.8rem;
+                        border-radius: 100%;
+                    }
+                    .menu-bars svg {
+                        width: 1.2rem;
+                    }
+                    .menu-bars_active {
+                        position: fixed;
+                        font-size: 14px;
+                        padding: 0.8rem;
+                        background: #f2f2f855;
+                        display: block;
+                        width: 15rem;
+                        height: auto;
+                        top: 4rem;
+                        z-index: 1000;
+                    }
+                    .menu-bars_active li {
+                        background: #f2f2f2;
+                        padding: 0.3rem;
+                        margin: 0.5rem;
+                        width: 100%;
+                    }
+                    .menu-bars_active li:hover {
+                        color: orange;
+                        background: #f2f2f2;
+                    }
+                    nav button {
+                        padding: 0.8rem;
+                    }
+                    /*hero secction*/
+                    .hero {
+                        background: url(../Img/melanie.jpg);
+                        position: relative;
+                    }
+                    .hero:before {
+                        content: '';
+                        width: 100%;
+                        height: 100%;
+                        background: #fff5;
+                        position: absolute;
+                    }
+                    .info-hero {
+                        width: 80%;
+                        z-index: 1;
+                    }
+                    .img-hero {
+                        width: 0;
+                        height: 0;
+                        overflow: hidden;
+                        position: absolute;
+                    }
+                    /*redes sociales seccion*/
+                    .redes-sociales {
+                        width: 100%;
+                    }
+                    .social {
+                        width: 3rem;
+                        height: 2.8rem;
+                    }
+                    .social .icon {
+                        width: 3rem;
+                        height: 2.8rem;
+                    }
+                    .icon svg {
+                        width: 2rem;
+                    }
+                    /*albumes section*/
+                    .title-albumes {
+                        width: 90%;
+                        font-size: 1rem;
+                    }
+                    .title-albumes .icon {
+                        width: 2rem;
+                        height: 2rem;
+                    }
+                    .title-albumes .icon svg {
+                        width: 1.5rem;
+                    }
+                    .container-albumes {
+                        width: 100%;
+                    }
+                    .album {
+                        width: 45%;
+                        height: 6rem;
+                        @include flexible(flex, wrap, space-around, center);
+                    }
+                    .album img {
+                        width: 5rem;
+                        height: 5rem;
+                        border-radius: 1rem;
+                    }
+                    /*sobre mi section*/
+                    .info-sobre_mi {
+                        width: 100%;
+                    }
+                    .title-info {
+                        width: 100%;
+                        font-size: 1.2rem;
+                    }
+                    .container-section_info {
+                        width: 100%;
+                        @include flexible(flex, wrap, space-around, center);
+                    }
+                    .section-info {
+                        width: 40%;
+                        font-size: 0.7rem;
+                        padding: 1rem;
+                        margin: 0.9rem;
+                    }
+                    .section-info .icon {
+                        width: 2.5rem;
+                        height: 2.5rem;
+                    }
+                    .section-info .ico svg {
+                        width: 2rem;
+                    }
+                }
+                /*publicidad*/
+                .publicidad {
+                    height: 20rem;
+                }
+                /*popular*/
+                .header-container_popular {
+                    width: 100%;
+                    font-size: 1rem;
+                    height: 7rem;
+                }
+                .header-container_popular .icon {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+                .header-container_popular .icon svg {
+                    width: 2rem;
+                }
+                .options-container_popular {
+                    width: 100%;
+                }
+                .option {
+                    width: 45%;
+                    font-size: 1rem;
+                    padding: 0.5rem;
+                }
+                .option .icon {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+                .option .icon svg {
+                    width: 1.5rem;
+                }
+                .img-popular {
+                    width: 70%;
+                    height: 15rem;
+                }
+                /*biografia section*/
+                .biografia {
+                    width: 100%;
+                }
+                .img-biografia {
+                    width: 70%;
+                }
+                .container-biografia {
+                    width: 90%;
+                }
+                .header-container_biografia {
+                    width: 90%;
+                    font-size: 1rem;
+                }
+                .header-container_biografia .icon {
+                    width: 2.5rem;
+                    height: 2.5rem;
+                }
+                .header-container_biografia .icon svg {
+                    width: 2rem;
+                }
+                .descripcion-container_biografia {
+                    padding: 0.5rem;
+                }
+            }
+            
+            @media(max-width:650px) {
+                header {
+                    width: 100%;
+                }
+                nav {
+                    width: 98%;
+                    @include flexible(flex, wrap, space-between, center);
+                    transition: all 500ms;
+                }
+                nav .logo {
+                    font-size: 1.5rem;
+                    position: relative;
+                }
+                nav menu {
+                    width: 5rem;
+                }
+                nav menu button {
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+                    display: none;
+                    position: absolute;
+                }
+                nav a {
+                    width: 0;
+                    height: 0;
+                    overflow: hidden;
+                    display: none;
+                    position: absolute;
+                }
+                /*
+                .menu-bars_active {
+                    background: orange;
+                    display: block;
+                    width: 20rem;
+                    height: 50vh;
+                    top: 4rem;
+                    margin-left: -15rem;
+                    z-index: 1000;
+                }
+                .menu-bars_active li {
+                    background: red;
+                    padding: 0.3rem;
+                    margin: 0.5rem;
+                    width: 100%;
+                    height: 2rem;
+                    position: absolute;
+                }
+                .menu-bars_active li:hover {
+                    color: orange;
+                    background: #f2f2f2;
+                }
+                */
+            }

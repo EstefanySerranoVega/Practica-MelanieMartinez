@@ -1069,6 +1069,7 @@ footer {
 @media (max-width: 1200px) and (max-width: 992px) {
   header {
     width: 100%;
+    position: relative;
   }
 
   nav {
@@ -1086,6 +1087,7 @@ footer {
             align-items: center;
     -webkit-transition: all 500ms;
     transition: all 500ms;
+    position: relative;
   }
 
   nav menu {
@@ -1096,6 +1098,9 @@ footer {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    position: relative;
+    -webkit-transition: all 500ms;
+    transition: all 500ms;
   }
 
   .logo {
@@ -1103,10 +1108,15 @@ footer {
   }
 
   menu ul {
+    display: none;
+    position: absolute;
+    overflow: hidden;
     width: 0;
     height: 0;
-    overflow: hidden;
-    position: absolute;
+  }
+
+  menu ul li {
+    display: none;
   }
 
   menu .menu-bars {
@@ -1131,8 +1141,31 @@ footer {
     width: 1.2rem;
   }
 
+  .menu-bars_active {
+    position: fixed;
+    font-size: 14px;
+    padding: 0.8rem;
+    background: rgba(242, 242, 248, 0.3333333333);
+    display: block;
+    width: 15rem;
+    height: auto;
+    top: 4rem;
+    z-index: 1000;
+  }
+
+  .menu-bars_active li {
+    background: #f2f2f2;
+    padding: 0.3rem;
+    margin: 0.5rem;
+    width: 100%;
+  }
+
+  .menu-bars_active li:hover {
+    color: orange;
+    background: #f2f2f2;
+  }
+
   nav button {
-    background: yellow;
     padding: 0.8rem;
   }
 
@@ -1396,4 +1429,28 @@ footer {
     display: none;
     position: absolute;
   }
+
+  /*
+  .menu-bars_active {
+      background: orange;
+      display: block;
+      width: 20rem;
+      height: 50vh;
+      top: 4rem;
+      margin-left: -15rem;
+      z-index: 1000;
+  }
+  .menu-bars_active li {
+      background: red;
+      padding: 0.3rem;
+      margin: 0.5rem;
+      width: 100%;
+      height: 2rem;
+      position: absolute;
+  }
+  .menu-bars_active li:hover {
+      color: orange;
+      background: #f2f2f2;
+  }
+  */
 }
